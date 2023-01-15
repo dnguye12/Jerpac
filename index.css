@@ -1,0 +1,197 @@
+body {
+    background: #242424;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(assets/texture.jpg) repeat center;
+    opacity: .05;
+    filter: grayscale(1);
+    pointer-events: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#hub {
+    height: auto;
+    width: 100%;
+    padding: 16px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hub .logo {
+    background: url(assets/logo.png) no-repeat center/100% auto;
+    width: 302px;
+    height: 302px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    margin-bottom: 30px;
+
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#hub .logo:after {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    content: "SERVER IP";
+    letter-spacing: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    user-select: none;
+    pointer-events: none;
+    text-shadow: 0 2px 5px rgb(0 0 0 / 30%);
+}
+
+#hub .hub-btn {
+    color: #474747;
+    border-radius: 5px;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    text-shadow: 0 3px 6px rgb(0 0 0 / 10%);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 103px;
+    cursor: pointer;
+}
+
+#hub .hub-btn:hover {
+    color: #fff;
+    text-shadow: 0 9px 12px rgba(0, 0, 0, .15);
+}
+
+#hub .hub-home:hover {
+    background-color: #FF9505;
+}
+
+#hub .hub-store:hover {
+    background-color: #e93a4f;
+}
+
+#hub .hub-vote:hover {
+    background-color: #6ca557;
+}
+
+#hub .hub-wiki:hover {
+    background-color: #5252a9;
+}
+
+#hub .btn-pseudoLink {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#hub .hub-text {
+    display: inline-block;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    margin: auto;
+}
+
+@media only screen and (min-width: 992px) {
+    #hub {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        justify-content: normal;
+        align-items: normal;
+        height: 100vh;
+    }
+
+    #hub .logo {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 3;
+    }
+
+    #hub .logo:after {
+        bottom: 4px;
+    }
+
+    #hub .hub-btn {
+        margin: 0px;
+        max-width: unset;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+    #hub .hub-text {
+        font-size: 78px;
+        height: 78px;
+        line-height: 78px;
+    }
+
+    #hub .hub-text b {
+        font-size: 110px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1140px) {
+    #hub .hub-text {
+        font-size: 48px;
+        height: 48px;
+        line-height: 48px;
+    }
+
+    #hub .hub-text b {
+        font-size: 64px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #hub .hub-text {
+        font-size: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    #hub .hub-text b {
+        font-size: 42px;
+    }
+}

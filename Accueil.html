@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header id="header">
+        <div id="header-wrap">
+            <div class="container-fluid closed" id="home-header">
+                <ul class="container d-flex align-items-center justify-content-between w-100">
+                    <a href="index.html" class="active">
+                        <li>HOME</li>
+                    </a>
+                    <a href="#">
+                        <li>BOUTIQUE</li>
+                    </a>
+                    <a href="#">
+                        <li>VOTER</li>
+                    </a>
+                    <a href="#">
+                        <li>ROADMAP</li>
+                    </a>
+                    <a href="#">
+                        <li>WIKI</li>
+                    </a>
+                    <a href="javascript:void(0);" id="mbIcon" class="closed">
+                        <li class="icon"><i class="bi bi-list"></i></li>
+                    </a>
+                </ul>
+            </div>
+
+            <div id="dh-mb-menu-toggler" class="justify-content-center align-content-center closed">
+                <i class="bi bi-list closed" id="dh-mb-menu-icon"></i>
+            </div>
+            <div id="dh-mb-menu" class="closed">
+                <ul class="">
+                    <img src="assets/logo.png" alt="logo">
+                    <a href="#">
+                        <li>HOME</li>
+                    </a>
+                    <a href="#">
+                        <li>BOUTIQUE</li>
+                    </a>
+                    <a href="#">
+                        <li>VOTER</li>
+                    </a>
+                    <a href="#">
+                        <li>ROADMAP</li>
+                    </a>
+                    <a href="#">
+                        <li>WIKI</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="hero d-flex justify-content-center align-items-center">
+
+                <a href="#" class="d-flex justify-content-center align-items-center">
+                    <img src="assets/logo.png" alt="logo" id="logo" class="drop-shadow my-md-5"></a>
+            </div>
+
+            <div id="server-discord-count">
+                <div
+                    class="container-lg h-100 d-flex flex-column flex-md-row justify-content-center align-items-center">
+                    <button class="d-flex justify-content-center align-items-center drop-shadow h-100" id="serverLink"
+                        type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="copyAddress();"
+                        data-toggle="modal" data-target="#exampleModal"><i class="bi bi-hdd-rack drop-shadow"></i>
+                        <div class="serverLink-desc">
+                            <p>Click to copy server address</p>
+                            <h2 class="text--title" id="serverText" data-ip="http://play.mc-barbercraft.com"><span
+                                    id="serverCount">0</span> Players Online</h2>
+                        </div>
+                        <div class="iconBoxed">
+                        </div>
+                    </button>
+
+                    <a href="https://discord.com/invite/bedwars"
+                        class="header__discord header__externalLink d-flex justify-content-center align-items-center drop-shadow flex-row-reverse h-100"
+                        id="discordLink" target="_blank">
+                        <i class="bi bi-discord drop-shadow"></i>
+                        <div class="discordLink-desc">
+                            <p>Discord - <span id="discordCount">64</span> Online</p>
+                            <h2 class="text--title">Meet Other People</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content p-2">
+                        <div class="modal-body">
+                            <h3>IP Copied</h3>
+                            <h5>Now go join our server!</h5>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </header>
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+<script>
+    let mbIcon = document.getElementById("mbIcon");
+    let mbMenu = document.getElementById("dh-mb-menu");
+    let homeHeader = document.getElementById("home-header");
+
+    homeHeader.addEventListener("click", openNav);
+
+    function openNav() {
+        let helper = document.querySelectorAll("#mbIcon i")[0];
+        helper.classList.toggle("bi-x-lg");
+        helper.classList.toggle("bi-list");
+        homeHeader.classList.toggle("opened");
+        homeHeader.classList.toggle("closed");
+        mbMenu.classList.toggle("opened");
+        mbMenu.classList.toggle("closed");
+    }
+
+    try {
+        fetch(`https://api.minetools.eu/ping/mc.hypixel.net/25565`).then(res => res.json()).then(data => setServerCount(data.players.online));
+    } catch { console.log("Unable to fetch server player count from API.") }
+    try {
+        fetch(`https://discord.com/api/v9/invites/bedwars?with_counts=true`).then(res => res.json()).then(data => setDiscordCount(data.approximate_presence_count));
+    } catch { console.log("Unable to fetch Discord player count from API.") }
+    function setServerCount(count) {
+        try {
+            document.getElementById("serverCount").innerHTML = count;
+        } catch { console.log("Unable to set server player count.") }
+    }
+    function setDiscordCount(count) {
+        try {
+            document.getElementById("discordCount").innerHTML = count;
+        } catch { console.log("Unable to set Discord player count.") }
+    }
+
+    function copyAddress() {
+        navigator.clipboard.writeText("mc.hypixel.net");
+    }
+
+    let menuToggler = document.getElementById("dh-mb-menu-toggler");
+    let menuIcon = document.getElementById("dh-mb-menu-icon");
+    let menuMb = document.getElementById("dh-mb-menu");
+    menuToggler.addEventListener("click", function () {
+        menuIcon.classList.toggle("opened");
+        menuIcon.classList.toggle("closed");
+        menuToggler.classList.toggle("opened");
+        menuToggler.classList.toggle("closed");
+        menuIcon.classList.toggle("bi-list");
+        menuIcon.classList.toggle("bi-x");
+        menuMb.classList.toggle("opened");
+        menuMb.classList.toggle("closed");
+        if (menuToggler.classList.contains("closed")) {
+        } else {
+        }
+    })
+</script>
+
+</html>
