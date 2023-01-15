@@ -1,5 +1,8 @@
 :root {
     --col-black: rgb(27, 27, 27);
+    --col-gray-light: #3b3d43;
+    --col-gray: #313238;
+    --col-gray-dark: #1f2024;
     --col-white: white;
     --col-white-dark: #C2C0D6;
     --col-orange: #fd7e14;

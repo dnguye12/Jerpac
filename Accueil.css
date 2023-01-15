@@ -1,0 +1,110 @@
+main {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.news-line {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 16px;
+}
+
+.news-small {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: var(--col-gray);
+    color: var(--col-white);
+    overflow: hidden;
+}
+
+.news-small .news-small-img {
+    width: 100%;
+    height: auto;
+}
+
+.news-small .news-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    width: 100%;
+}
+
+.news-small .news-card .time {
+    background-color: var(--col-gray-light);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 54px;
+    min-height: 72px;
+    margin-right: 18px;
+}
+
+.news-small .news-card .time h2 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.news-small .news-card .time h3 {
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.news-small .news-card .desc h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.news-small .news-card .desc {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.news-small .news-card .desc .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.news-small .news-card .desc .links .author {
+    text-decoration: none;
+}
+
+.news-small .news-card .desc .links .author img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.news-small .news-card .desc .links .author span {
+    color: var(--col-white);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.news-small .news-card .desc .links .readmore {
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1.25px;
+    color: var(--col-orange);
+    transition: color 350ms, background-color 350ms;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.news-small .news-card .desc .links .readmore:hover {
+    color: var(--col-white);
+    background-color: var(--col-orange);
+}
