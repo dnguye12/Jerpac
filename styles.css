@@ -416,3 +416,39 @@ body {
         width: 100%;
     }
 }
+
+
+footer {
+    display: flex;
+    background-color: var(--col-gray);
+    padding: 16px;
+}
+
+footer h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--col-white);
+}
+
+footer p {
+    margin-bottom: 0px;
+    color: grey;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--col-white);
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-wrap {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    footer h3 {
+        margin-top: 16px;
+    }
+}

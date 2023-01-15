@@ -1,12 +1,15 @@
+body {
+    background-color: var(--col-gray-dark);
+}
 main {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .news-line {
     display: grid;
     grid-template-columns: auto auto;
-    column-gap: 16px;
+    column-gap: 24px;
 }
 
 .news-small {
@@ -60,10 +63,6 @@ main {
 .news-small .news-card .desc h1 {
     font-size: 20px;
     font-weight: 600;
-    width: 515px;
-    white-space: nowrap;
-     overflow: hidden;
-     text-overflow: ellipsis;
 }
 
 .news-small .news-card .desc {
@@ -114,6 +113,16 @@ main {
     background-color: var(--col-orange);
 }
 
+@media only screen and (max-width: 768px) {
+
+    .news-line {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        row-gap: 16px;
+    }
+}
+
 .news-big {
     text-decoration: none;
     display: flex;
@@ -124,7 +133,7 @@ main {
     background-color: var(--col-gray);
     color: var(--col-white);
     overflow: hidden;
-    margin-top: 16px;
+    margin-top: 24px;
 }
 
 .news-big .news-big-img {
