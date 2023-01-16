@@ -263,11 +263,11 @@ body {
     #dh-mb-menu ul {
         list-style: none;
         width: 302px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px !important;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px !important;
     }
 }
 
@@ -438,8 +438,35 @@ footer p {
 }
 
 footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
     text-decoration: none;
     color: var(--col-white);
+    height: 48px;
+    width: 48px;
+    background-color: var(--col-orange);
+
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+    transition: background-color 350ms;
+}
+
+footer a:not(:first-child) {
+    margin-left: 16px;
+}
+
+footer a i {
+    font-size: 24px;
+    transition: transform 350ms;
+}
+
+footer a:hover {
+    background-color: var(--col-orange-hover);
+}
+
+footer a:hover i {
+    transform: rotate(-30deg);
 }
 
 @media only screen and (max-width: 768px) {
