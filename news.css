@@ -1,0 +1,123 @@
+body {
+    background-color: var(--col-gray-dark);
+}
+.return button {
+    margin-top: 24px;
+border-radius: 10px;
+    background-color: var(--col-red);
+    color: var(--col-white);
+    border: none;
+    padding: 12px;
+    font-weight: 500;
+    transition: background-color 350ms;
+}
+
+.return button:hover {
+    background-color: var(--col-red-hover);
+}
+
+main {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    background-color: var(--col-gray);
+    border-radius: 10px;
+    padding: 36px !important;
+}
+
+.news .author-info {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 18px;
+}
+
+.news .author img {
+    width: 96px;
+    border-radius: 50%;
+}
+
+.news .author .rank {
+    font-weight: 600;
+    font-size: 10px;
+    padding: 4px 12px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--col-white);
+}
+
+.news .author .rank-moderator {
+    background-color: var(--col-red);
+}
+
+.news .author span {
+    color: var(--col-white);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.news .content {
+    padding-left: 18px;
+}
+.news .content img {
+    width: 100%;
+}
+
+.news .content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color:var(--col-white);
+}
+
+.news .content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--col-orange)
+}
+
+.news .content p {
+    color:var(--col-white);
+    margin-bottom: 0px;
+}
+
+.news .content span {
+    color: var(--col-orange);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+
+@media only screen and (max-width: 768px) {
+ .news {
+    flex-direction: column;
+ }
+
+ .news .author {
+    border-bottom: 1px solid var(--col-gray-light);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+ }
+
+ .news .author-info {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 0px;
+}
+
+.news .author-info div {
+    margin-left: 16px;
+}
+
+.news .author-info span {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.news .content {
+    padding-left: 0px;
+}
+}
